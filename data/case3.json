@@ -1,0 +1,39 @@
+{
+    "robot": "kuka",
+    "scene": "kingpin_obstacle.urdf",
+    "task": "kingpin3.irl",
+    "runs": [
+        {
+            "name": "prm_run_1",
+            "planner": "prm",
+            "num_samples": [
+                50,
+                10,
+                10
+            ],
+            "num_nn_connect": 10,
+            "dist_res": 0.02,
+            "ang_res": 1
+        },
+        {
+            "name": "prm_run_2",
+            "planner": "prm",
+            "num_samples": [
+                500,
+                100,
+                100
+            ],
+            "num_nn_connect": 10,
+            "dist_res": 0.02,
+            "ang_res": 1
+        },
+        {
+            "name": "grid_run_1",
+            "planner": "grid",
+            "sample_method": "halton",
+            "min_samples_per_pt": 50,
+            "dist_res": 0.02,
+            "ang_res": 5
+        }
+    ]
+}
