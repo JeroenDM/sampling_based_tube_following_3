@@ -45,13 +45,13 @@ data_frames, latex_strings = list(zip(*res))  # fancy python list unzipping
 
 with open("README.md", "w") as md_file:
     for i, data_frame in enumerate(data_frames):
-        md_file.write("## Case {}\n".format(i))
+        md_file.write("## Case {}\n".format(i + 1))
         md_file.write(tabulate(data_frame, headers="keys", tablefmt="github"))
         md_file.write("\n\n")
 
 with open("tables.tex", "w") as latex_file:
     for i, latex_str in enumerate(latex_strings):
-        latex_file.write("Case {}\n".format(i))
+        latex_file.write("Case {}\n".format(i + 1))
         latex_file.write(latex_str)
         latex_file.write("\n\n")
 
